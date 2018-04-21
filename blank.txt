@@ -1,0 +1,19 @@
+def compare(fname1,fname2):
+
+	fd1 = open(fname1,"r")
+	fd2 = open(fname2,"r")
+
+	lines1 = fd1.readlines()
+	
+	key = 0
+
+	for i,lines2 in enumerate(fd2):
+	    if lines2 != lines1[i]:
+	        print ("line ", i, " in File2 is different from File1 \n")
+	        print (lines2)
+		key = i
+	    else:
+	        continue
+
+	for key,lines2 in enumerate(fd2):
+		if(key):
